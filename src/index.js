@@ -3,6 +3,10 @@ const bodyParser = require("body-parser");
 
 const { PORT } = require("./config/ServerConfig");
 
+const TicketCopntroller = require('./controller/ticket-controller');
+
+const jobs = require('./utils/jobs');
+
 const {sendBasicEmail} = require('./services/email-service');
 
 const app = express();
