@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 
 const { PORT } = require("./config/ServerConfig");
 
-const TicketCopntroller = require('./controller/ticket-controller');
+const TicketController = require('./controller/ticket-controller');
 
 const jobs = require('./utils/jobs');
 
@@ -14,6 +14,8 @@ const app = express();
 const configAndStartServer = () => {
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
+
+  app.post('/api/v1/tickets',TicketController.create);
 
   app.listen(PORT, () => {
     console.log(`server is started at ${PORT}`);
