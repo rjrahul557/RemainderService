@@ -5,7 +5,7 @@ const { PORT } = require("./config/ServerConfig");
 
 const TicketController = require('./controller/ticket-controller');
 
-const jobs = require('./utils/jobs');
+const jobs = require('./utils/job');
 
 const {sendBasicEmail} = require('./services/email-service');
 
@@ -19,6 +19,7 @@ const configAndStartServer = () => {
 
   app.listen(PORT, () => {
     console.log(`server is started at ${PORT}`);
+    jobs();
 
     sendBasicEmail(
         'support@admin.com',

@@ -3,6 +3,7 @@ const TicketService = require('../services/email-service');
 const create = async (req, res) => {
     try {
         const response = await TicketService.createNotification(req.body);
+        console.log(response);
         return res.status(201).json({
             success: true,
             data: response,
@@ -22,3 +23,4 @@ const create = async (req, res) => {
 module.exports = {
     create
 }
+
