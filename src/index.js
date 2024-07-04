@@ -21,12 +21,12 @@ const configAndStartServer = () => {
     console.log(`server is started at ${PORT}`);
     jobs();
 
-    sendBasicEmail(
-        'support@admin.com',
-        'rajveerrjz1605@gmail.com',
-        'This is a third testing mail',
-        'Hey i hope this mail finds you well.THIS IS FOR TESTING PURPOSE'
-    )
+    // sendBasicEmail(
+    //     'support@admin.com',
+    //     'rajveerrjz1605@gmail.com',
+    //     'This is a third testing mail',
+    //     'Hey i hope this mail finds you well.THIS IS FOR TESTING PURPOSE'
+    // )
     
   });
 };
